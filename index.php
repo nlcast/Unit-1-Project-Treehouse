@@ -1,7 +1,8 @@
 <?php
 
-$quotes
 
+// Multidementional arrays for each quote. I hope to combine these somehow into the single variable: $quotes
+// This is going to be difficult. :)
 $quote1 = array(
   "quote" => "There are wounds that never show on the body that are deeper and more hurtful than anything that bleeds.",
   "source" => "Laurell K. Hamilton",
@@ -50,6 +51,9 @@ $quote7 = array(
   "citation" => "Letters to an American Lady",
   "year" => "1950"
 );
+
+$quotes = array($quote1, $quote2, $quote3, $quote4, $quote5, $quote6, $quote7);
+var_dump($quotes);
 
 <!DOCTYPE html>
 <html lang="en">
