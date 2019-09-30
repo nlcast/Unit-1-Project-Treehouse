@@ -69,11 +69,15 @@ function getRandomQuote(){
 
 
 // Create the printQuote funtion and name it printQuote
-$random_quote = getRandomQuote();
+
+
 function printQuote() {
 $random_quote = getRandomQuote();
-}
+
 
 var_dump($random_quote);
+}
+
+
 
 ?>
