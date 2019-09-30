@@ -69,17 +69,11 @@ function getRandomQuote(){
 
 
 // Create the printQuote funtion and name it printQuote
-
+$random_quote = getRandomQuote();
 function printQuote() {
-echo $quotes[$randnum]['quote']
-echo $quotes[$randnum]['source']
- if($quotes[$randnum]['citation']){
-   echo $quotes[$randnum]['citation'];
- }
- if($quotes[$randnum]['year']){
-   echo $quotes[$randnum]['year'];
- }
-
+$random_quote = getRandomQuote();
 }
+
+var_dump($random_quote);
 
 ?>
