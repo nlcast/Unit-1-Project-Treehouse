@@ -66,20 +66,8 @@ $quotes = [
 function getRandomQuote(){
   global $quotes;
   $randnum = rand (0, 6);
-
-
-
+  return $quotes[$randnum]
 }
-
-var_dump($quotes);
-   // echo $quotes[$randnum]["quote"];
-   // echo $quotes[$randnum]["source"];
-   // echo $quotes[$randnum]["citation"];
-   // echo $quotes[$randnum]["year"];
-//var_dump($randquote);
-
-//
-
 
 
 
