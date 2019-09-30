@@ -1,9 +1,11 @@
+<?php
 // PHP - Random Quote Generator
 
 // Create the Multidimensional array of quote elements and name it quotes
 // Each inner array element should be an associative array
 
 // Build associative arrays for each quote inside a Multidimensional array using shortcode
+
 $quotes = [
     [
       'quote' => 'I’m fine. Well, I’m not fine – I’m here.',
@@ -48,7 +50,7 @@ $quotes = [
     ],
 
     [
-      'quote' => "There are better things ahead than any we leave behind.",
+      'quote' => 'There are better things ahead than any we leave behind.',
       'source' => 'C. S. Lewis',
       'citation' => 'Letters to an American Lady',
       'year' => '1950'
@@ -56,7 +58,9 @@ $quotes = [
 ];
 
 
-// This function generates a random number between 0 and 6 and assigns it to the variable $randnum. Then it returns $quotes[$randnum] pulling a quote from the array by the randomly sellected number.
+// This function generates a random number between 0 and 6 and assigns it to the variable $randnum.
+// Then it returns $quotes[$randnum] pulling a quote from the array by the randomly sellected number.
+
 function getRandomQuote(){
   global $quotes;
   $randnum = rand (0, 6);
@@ -65,10 +69,10 @@ function getRandomQuote(){
 
 
 // Create the printQuote funtion and name it printQuote
+
 function printQuote() {
-  <?php include 'inc/functions.php'; ?>
-  $quotes[$randnum]['quote']
-  $quotes[$randnum]['source']
-  $quotes[$randnum]['citation']
-  $quotes[$randnum]['year']
+
+
 }
+
+?>
