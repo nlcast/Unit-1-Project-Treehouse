@@ -1,4 +1,4 @@
-inc/functions.php
+<?php include('inc/functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
