@@ -73,9 +73,14 @@ function getRandomQuote(){
 
 function printQuote() {
 $random_quote = getRandomQuote();
-
-
-var_dump($random_quote);
+  echo "<p class=\"quote\">" . $random_quote["quote"] . "</p>";
+  echo "<p class=\"source\">" . $random_quote["source"] . "</span>";
+  if($random_quote["citation"]){
+      echo "<class=\"citation\">, " . $random_quote["citation"] . "</span>";
+    }
+    if($random_quote["year"] > 1){
+      echo "<span class=\"year\">" . $random_quote["year"] . "</span></p>";
+    }
 }
 
 

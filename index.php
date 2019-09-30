@@ -11,8 +11,7 @@
 <body>
   <div class="container">
     <div id="quote-box">
-      <p class="quote"><?php printQuote() ?></p>
-      <p class="source"><class="citation">citation</span><span class="year">year</span></p>
+      <?php printQuote() ?>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>
