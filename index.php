@@ -1,12 +1,9 @@
 <?php
-
-
-// Build associative arrays for each quote.
 $quotes = [
     [
-      'quote' => 'There are wounds that never show on the body that are deeper and more hurtful than anything that bleeds.',
-      'source' => 'Laurell K. Hamilton',
-      'citation' => 'Mistral’s Kiss',
+      'quote' => 'I’m fine. Well, I’m not fine – I’m here.',
+      'source' => 'Ned Vizzini',
+      'citation' => 'It’s Kind of a Funny Story',
       'year' => '2006'
     ],
 
@@ -53,25 +50,20 @@ $quotes = [
     ]
 ];
 
-//echo $quotes[0]["quote"];
 
-// Dump variable see contents
-//var_dump($quotes);
-// Function to get random quote
-//$random = rand (0, 6);
-//var_dump($random);
-
-// Create getRandomQuote function. Takes in one parameter, array.
+// This function generates a random number between 0 and 6 and assigns it to the variable $randnum. Then it returns $quotes[$randnum] pulling a quote from the array by the randomly sellected number.
 
 function getRandomQuote(){
   global $quotes;
   $randnum = rand (0, 6);
-  return $quotes[$randnum]
+  return $quotes[$randnum];
 }
 
+var_dump($quotes[$randnum]);
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,8 +76,8 @@ function getRandomQuote(){
 <body>
   <div class="container">
     <div id="quote-box">
-      <p class="quote"><?php  ?> </p>
-      <p class="source"><class="citation"><?php echo $quote1['source']; ?></span><span class="year"><?php echo $quote1['year'];?></span></p>
+      <p class="quote">Quote here.</p>
+      <p class="source"><class="citation">citation</span><span class="year">year</span></p>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>
