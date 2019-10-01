@@ -68,6 +68,10 @@ body {
   font-style: normal;
 }
 
+.tags {
+  font-style: italic;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;

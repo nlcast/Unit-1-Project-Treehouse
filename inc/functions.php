@@ -9,7 +9,7 @@ $quotes = [
       'source' => 'Ned Vizzini',
       'citation' => 'It’s Kind of a Funny Story',
       'year' => '2006',
-      'gender' => 'male'
+      'tags' => 'Humor'
     ],
 
     [
@@ -17,7 +17,7 @@ $quotes = [
       'source' => 'Stephen Fry',
       'citation' => '',
       'year' => '',
-      'gender' => 'male'
+      'tags' => 'Quote'
     ],
 
     [
@@ -25,7 +25,7 @@ $quotes = [
       'source' => 'Barbara Kingsolver',
       'citation' => 'The Bean Trees',
       'year' => '1988',
-      'gender' => 'female'
+      'tags' => 'Book'
     ],
 
     [
@@ -33,7 +33,7 @@ $quotes = [
       'source' => 'C.S. Lewis',
       'citation' => 'The Problem of Pain',
       'year' => '1940',
-      'gender' => 'male'
+      'tags' => 'Book'
     ],
 
     [
@@ -41,7 +41,7 @@ $quotes = [
       'source' => 'Elizabeth Wurtzel',
       'citation' => 'Prozac Nation',
       'year' => '1994',
-      'gender' => 'female'
+      'tags' => 'Book'
     ],
 
     [
@@ -49,7 +49,7 @@ $quotes = [
       'source' => 'J.K. Rowling',
       'citation' => '',
       'year' => '',
-      'gender' => 'female'
+      'tags' => 'Quote'
     ],
 
     [
@@ -57,7 +57,7 @@ $quotes = [
       'source' => 'C. S. Lewis',
       'citation' => 'Letters to an American Lady',
       'year' => '1950',
-      'gender' => 'male'
+      'tags' => 'Book'
     ]
 ];
 
@@ -78,15 +78,21 @@ function getRandomQuote(){
 
 function printQuote() {
   $random_quote = getRandomQuote();
-    echo "<p class=\"quote\">" . $random_quote["quote"] . "</p>";
-    echo "<p class=\"source\">" . $random_quote["source"] . "</span>";
+    echo "<p class=\"quote\">" . $random_quote["quote"] . "</p>\n";
+    echo "      <p class=\"source\">" . $random_quote["source"] . "</span>";
 
     if($random_quote["citation"]){
         echo "<class=\"citation\">, " . $random_quote["citation"] . "</span>";
       }
 
       if($random_quote["year"] > 1){
-        echo "<span class=\"year\">" . $random_quote["year"] . "</span></p>";
+        echo "<span class=\"year\">" . $random_quote["year"] . "</span>";
+      }
+
+      if($random_quote["tags"] == "Humor" || $random_quote["tags"] == "Quote"){
+        echo " <span class=\"tags\"> (" . $random_quote["tags"] . ")</span></p>";
+      } else {
+        echo "</p>";
       }
 }
 
